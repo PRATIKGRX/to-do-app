@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h2>Todo App</h2>
+
+    <div>
+        <form action="" onsubmit="addTask(event)"  >
+            <label for="">Add item</label>
+            <input id="add_text_input" type="text">
+            <button>Add</button>
+        </form>
+
+        <!-- <form action="">
+            <label for="">Edit item</label>
+            <input type="text" value="task 1">
+            <button>Edit</button>
+        </form> -->
+
+    </div>
+
+    <div>
+        <table>
+            <thead>
+                <tr>
+                    <th>SN</th>
+                    <th>Task Name</th>
+                    <th>Action</th>
+                </tr>
+            </thead>
+            <tbody id="task_body">
+                <!-- <tr>
+                    <td>1</td>
+                    <td>task 1</td>
+                    <td>
+                        <button>Edit</button>
+                        <button>Delete</button>
+                    </td>
+                </tr>
+                <tr>
+                    <td>2</td>
+                    <td>task 2</td>
+                    <td>
+                        <button>Edit</button>
+                        <button>Delete</button>
+                    </td>
+                </tr> -->
+            </tbody>
+        </table>
+    </div>
+    
+</body>
+
+<script src="script.js"></script>
+</html>
