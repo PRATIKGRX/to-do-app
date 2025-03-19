@@ -1,57 +1,37 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
     <title>Document</title>
-    <style>
-        #editForm {
-            display: none;
-        }
-    </style>
+
 </head>
-
 <body>
-    <h2>Todo App</h2>
-
-    <div>
-        <form id="addForm" action="" onsubmit="addTask(event)" >
-            <label for="">Add item</label>
-            <input id="add_text_input" type="text">
-            <button>Add</button>
+    <div id="enterForm" class="form-body">
+        <form>
+            <input type="text" name="" id="userInput">
+            <button onclick="addTask(event)">ADD</button>
         </form>
-        <form id="editForm" action="" onsubmit="updateTask(event)">
-            <label for="">Edit item</label>
-            <input id="edit_text_input" type="text">
-            <button>Edit</button>
-        </form>
-        <!-- <button onclick="testing(event)">testing</button> -->
-
-        <!-- <form action="">
-            <label for="">Edit item</label>
-            <input type="text" value="task 1">
-            <button>Edit</button>
-        </form> -->
 
     </div>
-
-    <div>
-        <table>
-            <thead>
-                <tr>
-                    <th>SN</th>
-                    <th>Task Name</th>
-                    <th>Action</th>
-                </tr>
-            </thead>
-            <tbody id="task_body">
-            </tbody>
-        </table>
+    <div id="edit" class="form-body">
+        <form>
+            <input type="text" name="" id="editVal">
+            <button onclick="editForm(event)">Edit</button>
+        </form>
     </div>
-
+    <table>
+        <thead>
+            <tr>
+                <th>S.N</th>
+                <th>Task</th>
+            </tr>
+        </thead>
+        <tbody id="tableBody"> 
+           
+        </tbody>
+    </table>
 </body>
-
 <script src="script.js"></script>
-
 </html>
