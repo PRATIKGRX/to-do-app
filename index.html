@@ -1,47 +1,74 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>to-do-app</title>
     <script src="https://cdn.tailwindcss.com"></script>
-    <script src="https://kit.fontawesome.com/14b616764f.js" crossorigin="anonymous"></script>
-   <link rel="stylesheet" href="style.css">
-</head>
-<body>
-    <div class="bg-white border-2 border-stone-400 h-screen mt-4 px-5 py-3 rounded-xl shadow-2xl shadow-stone-600">
-        <h1 class="text-4xl my-6 ">
-            To-Do App
-        </h1>
-        <form action="" id="add" class="mt-4 ">
-            <input type="text" name="" placeholder="tasks-to-do.." id="taskInput" class="border-2 border-stone-400 text-2xl px-2 py-3 rounded-lg">
-            <button onclick="addTask(event)" class="border-2 border-green-500 text-2xl px-2 py-3 rounded-lg text-green-500 transition duration-500 hover:bg-green-500 hover:text-white">Add</button>
+    <script
+      src="https://kit.fontawesome.com/14b616764f.js"
+      crossorigin="anonymous"
+    ></script>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div
+      class="bg-white border-2 border-stone-400 h-screen w-[800px] mt-4 px-5 py-3 rounded-xl shadow-2xl shadow-stone-600"
+    >
+      <h1 class="text-4xl my-6">To-Do App</h1>
+      <div class="">
+        <form action="" id="add" class="mt-4 flex justify-between w-full">
+          <input
+            type="text"
+            name=""
+            placeholder="tasks-to-do.."
+            id="taskInput"
+            class="border-2 border-stone-400 text-2xl px-2 py-3 rounded-lg w-[80%]"
+          />
+          <button
+            onclick="addTask(event)"
+            class="w-[18%] border-2 border-green-500 text-2xl px-2 py-3 rounded-lg text-green-500 transition duration-500 hover:bg-green-500 hover:text-white"
+          >
+            Add
+          </button>
         </form>
-        <form action="" id="edit" >
-            <input type="text" name="" id="taskEdit" class="border-2 border-stone-400 text-2xl px-2 py-3 rounded-lg">
-            <button onclick="updateTask(event)" class="border-2 border-green-500 text-2xl px-2 py-3 rounded-lg text-green-500 transition duration-500 hover:bg-green-500 hover:text-white">Edit</button>
+        <form action="" id="edit" class="mt-4 flex justify-between w-full">
+          <input
+            type="text"
+            name=""
+            id="taskEdit"
+            class="border-2 border-stone-400 text-2xl px-2 py-3 rounded-lg w-[80%]"
+          />
+          <button
+            onclick="updateTask(event)"
+            class="w-[18%] border-2 border-green-500 ml-1 text-2xl px-2 py-3 rounded-lg text-green-500 transition duration-500 hover:bg-green-500 hover:text-white"
+          >
+            Edit
+          </button>
         </form>
-        <div class="h-[30px]"><p id="alert" class="text-yellow-600"><i class="fa-solid fa-triangle-exclamation text-red-500"></i>Text is Invaild or empty</p>
-        </div>
-        <div>
-            
-            <table class="w-full border-collapse border-2 border-stone-400">
-                <thead>
-                    <tr class="bg-green-200 text-black py-[4px]">
-                        <th class="w-2">
-                            <i class="fa-solid fa-circle-check pl-2"></i>
-                        </th>
-                        <th class=" text-xl ">Task List</th>
-                        <th class="w-[100px]"></th>
-                    </tr>
-                </thead>
-                <tbody id="taskContainer">
-                    
-                </tbody>
-            </table>
-        </div>
+      </div>
+
+      <div class="h-[30px]">
+        <p id="alert" class="text-yellow-600">
+          <i class="fa-solid fa-triangle-exclamation text-red-500"></i>Text is
+          Invaild or empty
+        </p>
+      </div>
+      <div>
+        <table class="w-full border-collapse border-2 border-stone-400">
+          <thead>
+            <tr class="bg-green-200 text-black py-[4px]">
+              <th class="w-2">
+                <i class="fa-solid fa-circle-check pl-2"></i>
+              </th>
+              <th class="text-xl">Task List</th>
+              <th class="w-[100px]"></th>
+            </tr>
+          </thead>
+          <tbody id="taskContainer"></tbody>
+        </table>
+      </div>
     </div>
-   
-</body>
-<script src="script.js"></script>
+  </body>
+  <script src="script.js"></script>
 </html>
